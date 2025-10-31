@@ -179,12 +179,16 @@ class AttractionViewSet(viewsets.ReadOnlyModelViewSet):
     def popular(self, request):
         country = request.query_params.get('country')
         city = request.query_params.get('city')
+        search = self.request.query_params.get('search')
         
         queryset = self.get_queryset()
+        
         if country:
             queryset = queryset.filter(country_id=country)
         if city:
             queryset = queryset.filter(city__icontains=city)
+        if search:
+            queryset = queryset.filter(name__icontains=search)
         
         popular = queryset[:20]
         serializer = self.get_serializer(popular, many=True)

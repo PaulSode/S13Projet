@@ -79,9 +79,11 @@ function App() {
       if (data && data.length > 0) {
         console.log(`${data.length} attractions TripAdvisor récupérées pour ${country.name}`);
         for (var item in data){
-          const response = await fetch(
-        `${API_URL}/attractions/${item}/details_from_tripadvisor/`
-      );
+          if(item != 0){
+            const response = await fetch(
+              `${API_URL}/attractions/${item}/details_from_tripadvisor/`
+            );
+          }
         }
       }
     } catch (err) {

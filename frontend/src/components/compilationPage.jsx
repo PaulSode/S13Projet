@@ -149,7 +149,7 @@ Budget total: $${totalBudget}
 ITINÉRAIRE:
 ${itinerary}
 
-Découvrez le monde autrement avec TravelGuide ✈️
+Découvrez le monde autrement avec TravelGuide
     `;
 
     const blob = new Blob([summary], { type: "text/plain" });
@@ -163,7 +163,7 @@ Découvrez le monde autrement avec TravelGuide ✈️
   return (
     <div className="compilation-page">
       <div className="compilation-header">
-        <h1>📋 Ma Compilation</h1>
+        <h1>Ma Compilation</h1>
         <p className="subtitle">
           {sortedAttractions.length} attraction
           {sortedAttractions.length > 1 ? "s" : ""} • Budget: ${totalBudget}
@@ -176,7 +176,7 @@ Découvrez le monde autrement avec TravelGuide ✈️
           <h2>Votre compilation est vide</h2>
           <p>Explorez les attractions et ajoutez-les à votre liste !</p>
           <a href="/" className="btn-explore">
-            🔍 Commencer à explorer
+            Commencer à explorer
           </a>
         </div>
       ) : (
@@ -190,11 +190,11 @@ Découvrez le monde autrement avec TravelGuide ✈️
                 onChange={(e) => setSortBy(e.target.value)}
                 className="sort-select"
               >
-                <option value="budget_asc">💰 Budget (croissant)</option>
-                <option value="budget_desc">💰 Budget (décroissant)</option>
+                <option value="budget_asc">Budget (croissant)</option>
+                <option value="budget_desc">Budget (décroissant)</option>
                 {userLocation && (
                   <option value="distance">
-                    📍 Distance (itinéraire optimisé)
+                    Distance (itinéraire optimisé)
                   </option>
                 )}
               </select>
@@ -287,7 +287,7 @@ Découvrez le monde autrement avec TravelGuide ✈️
 
           <div className="compilation-summary">
             <div className="summary-card">
-              <h4>📊 Résumé</h4>
+              <h4>Résumé</h4>
               <div className="summary-stat">
                 <span>Attractions:</span>
                 <strong>{sortedAttractions.length}</strong>
@@ -312,7 +312,7 @@ Découvrez le monde autrement avec TravelGuide ✈️
 
             {sortBy === "distance" && userLocation && (
               <div className="summary-card">
-                <h4>🗺️ Itinéraire</h4>
+                <h4>Itinéraire</h4>
                 <p className="itinerary-info">
                   Cet itinéraire a été optimisé en utilisant l'algorithme du
                   plus proche voisin pour minimiser la distance totale.
