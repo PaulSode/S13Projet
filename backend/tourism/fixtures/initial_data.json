@@ -1,0 +1,226 @@
+[
+  {
+    "model": "tourism.country",
+    "pk": 1,
+    "fields": {
+      "name": "France",
+      "code": "FR",
+      "capital": "Paris",
+      "created_at": "2025-10-30T10:00:00Z"
+    }
+  },
+  {
+    "model": "tourism.country",
+    "pk": 2,
+    "fields": {
+      "name": "United States",
+      "code": "US",
+      "capital": "Washington D.C.",
+      "created_at": "2025-10-30T10:01:00Z"
+    }
+  },
+  {
+    "model": "tourism.country",
+    "pk": 3,
+    "fields": {
+      "name": "Germany",
+      "code": "DE",
+      "capital": "Berlin",
+      "created_at": "2025-10-30T10:02:00Z"
+    }
+  },
+  {
+    "model": "tourism.country",
+    "pk": 4,
+    "fields": {
+      "name": "Spain",
+      "code": "ES",
+      "capital": "Madrid",
+      "created_at": "2025-10-30T10:03:00Z"
+    }
+  },
+  {
+    "model": "tourism.country",
+    "pk": 5,
+    "fields": {
+      "name": "Italy",
+      "code": "IT",
+      "capital": "Rome",
+      "created_at": "2025-10-30T10:04:00Z"
+    }
+  },
+  {
+    "model": "tourism.category",
+    "pk": 1,
+    "fields": {
+      "name": "MONUMENT",
+      "description": "Monuments, sites historiques et attractions principales."
+    }
+  },
+  {
+    "model": "tourism.category",
+    "pk": 2,
+    "fields": {
+      "name": "RESTAURANT",
+      "description": "Lieux de restauration, cafés et bars."
+    }
+  },
+  {
+    "model": "tourism.category",
+    "pk": 3,
+    "fields": {
+      "name": "HOTEL",
+      "description": "Hôtels, auberges et hébergements."
+    }
+  },
+  {
+    "model": "tourism.attraction",
+    "pk": 1,
+    "fields": {
+      "tripadvisor_id": "TA_ID_123456",
+      "name": "Tour Eiffel",
+      "description": "La plus célèbre tour du monde, symbole de Paris.",
+      "category": 1, 
+      "country": 1,
+      "city": "Paris",
+      "address": "Champ de Mars, 75007 Paris, France",
+      "latitude": 48.8584,
+      "longitude": 2.2945,
+      "price_level": "moderate",
+      "opening_hours": {},
+      "num_reviews": 50000,
+      "num_likes": 120000,
+      "ranking": 1,
+      "rating": 4.8,
+      "attraction_groups": ["Landmark", "Iconic"],
+      "is_active": true,
+      "created_at": "2025-10-30T11:00:00Z",
+      "updated_at": "2025-10-30T11:00:00Z"
+    }
+  },
+  {
+    "model": "tourism.attraction",
+    "pk": 2,
+    "fields": {
+      "tripadvisor_id": "TA_ID_789012",
+      "name": "Le Jules Verne (Restaurant)",
+      "description": "Restaurant gastronomique situé dans la Tour Eiffel.",
+      "category": 2, 
+      "country": 1,
+      "city": "Paris",
+      "address": "Tour Eiffel, Avenue Gustave Eiffel, 75007 Paris, France",
+      "latitude": 48.8584,
+      "longitude": 2.2945,
+      "price_level": "luxury",
+      "opening_hours": {"Mon-Fri": "12:00-14:00, 19:00-21:30"},
+      "num_reviews": 8500,
+      "num_likes": 50000,
+      "ranking": 5,
+      "rating": 4.7,
+      "attraction_groups": [],
+      "is_active": true,
+      "created_at": "2025-10-30T11:05:00Z",
+      "updated_at": "2025-10-30T11:05:00Z"
+    }
+  },
+  {
+    "model": "tourism.attraction",
+    "pk": 3,
+    "fields": {
+      "tripadvisor_id": "TA_ID_345678",
+      "name": "The Plaza Hotel",
+      "description": "Hôtel emblématique de New York, face à Central Park.",
+      "category": 3, 
+      "country": 2,
+      "city": "New York",
+      "address": "Fifth Avenue at Central Park South, New York, NY 10019, USA",
+      "latitude": 40.7646,
+      "longitude": -73.9749,
+      "price_level": "luxury",
+      "opening_hours": {},
+      "num_reviews": 12000,
+      "num_likes": 80000,
+      "ranking": 10,
+      "rating": 4.5,
+      "attraction_groups": ["Luxury", "Historic"],
+      "is_active": true,
+      "created_at": "2025-10-30T11:10:00Z",
+      "updated_at": "2025-10-30T11:10:00Z"
+    }
+  },
+  {
+    "model": "tourism.attraction",
+    "pk": 4,
+    "fields": {
+      "tripadvisor_id": "TA_ID_DE001",
+      "name": "Porte de Brandebourg",
+      "description": "Symbole de la réunification allemande, monument historique majeur.",
+      "category": 1, 
+      "country": 3, 
+      "city": "Berlin",
+      "address": "Pariser Platz, 10117 Berlin, Germany",
+      "latitude": 52.5163,
+      "longitude": 13.3777,
+      "price_level": "free",
+      "opening_hours": {},
+      "num_reviews": 35000,
+      "num_likes": 75000,
+      "ranking": 2,
+      "rating": 4.6,
+      "attraction_groups": ["Historic", "Landmark"],
+      "is_active": true,
+      "created_at": "2025-10-30T11:15:00Z",
+      "updated_at": "2025-10-30T11:15:00Z"
+    }
+  },
+  {
+    "model": "tourism.attraction",
+    "pk": 5,
+    "fields": {
+      "tripadvisor_id": "TA_ID_ES001",
+      "name": "Sagrada Familia",
+      "description": "Basilique emblématique de Barcelone, œuvre inachevée de Gaudi.",
+      "category": 1, 
+      "country": 4, 
+      "city": "Barcelone",
+      "address": "Carrer de Mallorca, 401, 08013 Barcelona, Spain",
+      "latitude": 41.4036,
+      "longitude": 2.1744,
+      "price_level": "expensive",
+      "opening_hours": {},
+      "num_reviews": 60000,
+      "num_likes": 150000,
+      "ranking": 1,
+      "rating": 4.9,
+      "attraction_groups": ["Architecture", "Religious"],
+      "is_active": true,
+      "created_at": "2025-10-30T11:20:00Z",
+      "updated_at": "2025-10-30T11:20:00Z"
+    }
+  },
+  {
+    "model": "tourism.attraction",
+    "pk": 6,
+    "fields": {
+      "tripadvisor_id": "TA_ID_IT001",
+      "name": "Da Enzo al 29",
+      "description": "Trattoria romaine authentique, célèbre pour ses pâtes Cacio e Pepe.",
+      "category": 2, 
+      "country": 5, 
+      "city": "Rome",
+      "address": "Via dei Vascellari, 29, 00153 Roma RM, Italy",
+      "latitude": 41.8887,
+      "longitude": 12.4786,
+      "price_level": "budget",
+      "opening_hours": {"Tue-Sun": "12:30-15:00, 19:30-23:00"},
+      "num_reviews": 9000,
+      "num_likes": 40000,
+      "ranking": 8,
+      "rating": 4.5,
+      "attraction_groups": ["Local Favourite"],
+      "is_active": true,
+      "created_at": "2025-10-30T11:25:00Z",
+      "updated_at": "2025-10-30T11:25:00Z"
+    }
+  }
+]
